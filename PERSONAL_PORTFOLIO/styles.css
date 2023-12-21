@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: rgba(0, 0, 0, 0.582);
+    font-family:'PT Sans', sans-serif;
+    
+    
+    
+}
+div{
+    display: block;
+}
+.top-container{
+    background-color: #04364A;
+    width: 100%;
+    margin: 0;
+    height: 800px;
+    padding-top:50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.cloud1,.cloud2{
+    height: 100px;
+}
+.brief-info{
+    align-self: center;
+    text-align: justify;
+    flex: 1;
+}
+.cloud1{
+    position: relative;
+    top: 50px;
+    left: 200px;
+}
+.cloud2{
+    position: relative;
+    top: 600px;
+    right: 200px;
+}
+
+h1{
+    color: #64CCC5;
+    font-size: 5rem;
+    font-weight:300;
+    font-family: 'Major Mono Display', monospace;
+}
+h2{
+    color: #64CCC5;
+    font-size: 2rem;
+    font-family: 'PT Serif', serif; 
+    font-weight: 300;
+    padding-top: 40px;
+}
+.bold-text{
+    color: #64CCC5;
+    font-weight: bold;
+}
+h3{
+    color: #64CCC5;
+    font-size: 1.5rem;
+    font-family: 'PT Serif', serif; 
+    font-weight: 300;
+}
+p {
+    line-height: 1;
+    font-size:x-large;
+  }
+
+  
+.crop-image{
+    align-self: center;
+    flex: 1;
+    
+    padding-right: 50px;
+    
+    
+    
+    
+}
+.crop-image> img{
+    width: 100%;
+    height: auto;
+    
+   
+}
+
+
+.about-me{
+    text-align: center;
+    padding: 80px 0 80px;
+}
+
+.myinfo{
+    padding: 20px;
+}
+.self-image{
+    margin-bottom: 20px;
+    border: 5px white solid;
+    border-radius: 50%;
+}
+ .education{
+    margin-top: 50px;
+ }
+
+ .education >p{
+    padding-top: 20px;
+ }
+.middle-container{
+    text-align: center;
+    background-color:#DAFFFB;
+}
+.skills{
+    padding-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+.grid-container{
+    display: grid;
+    grid-template-rows:repeat(3 , 1fr);
+    grid-template-columns:200px auto;
+    text-align: left;
+    row-gap: 50px;
+    width: 50%;
+    column-gap: 50px;
+    margin: -30px 0 50px ;
+}
+.image-skill{
+    justify-self: center;
+    align-self: top;
+    
+}
+.bottom-container{
+    text-align: center;
+    padding-bottom: 50px;
+}
+.contact-info h2,p {
+    padding: 20px 0 20px;
+}
+.contact-me {
+    padding: 10px ;
+    font-size: 1.5rem;
+    font-family:'PT Serif', serif; 
+    border-radius: 5px;
+    border: none;
+    background-color: #64CCC5;
+    
+}
+.contact-me > a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer{
+    display: flex;
+    background-color: #176B87;
+    height: 100px;
+    text-align: center;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.footer a{
+    text-decoration: none;
+    padding: 10px;
+    border-left: 2px white solid;
+    border-right: 2px white solid;
+    color: white;
+    font-size: larger;
+    
+}
+.footer  p{
+    color: white;
+    font-size: larger;
+}
+@media (max-height: 800px) {
+
+     .top-container{
+        display: block;
+        height: 100%;
+        
+        
+    }
+    .brief-info{
+        display: block;
+        width: 100%;
+    }
+
+
+        
+    
+  }

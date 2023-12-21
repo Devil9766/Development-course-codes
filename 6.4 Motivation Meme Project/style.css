@@ -1,0 +1,34 @@
+#header1{
+    text-transform: uppercase;;
+    
+}
+body{
+    background-color: rgba(237, 104, 27, 0.816);
+}
+.image1{
+    border: 5px white solid;
+    width: 100%;
+}
+.poster1{
+    width: 50%;
+    margin-top: 80px;
+    margin-left: 25%;
+    color: white;
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+}
+.image2{
+    border: 5px white solid;
+    width: 100%;
+}
+#header2{
+    font-size: xx-large;
+}
+.poster2{
+    width: 50%;
+    margin-top: 20px;
+    margin-left:25%;
+    color: white;
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+}

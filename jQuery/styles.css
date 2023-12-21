@@ -1,0 +1,9 @@
+.big-title{
+    font-size: 5rem;
+    color: hsla(83, 84%, 59%, 0.945);
+    text-align: center;
+}
+
+.margin-50{
+    margin: 50px;
+}

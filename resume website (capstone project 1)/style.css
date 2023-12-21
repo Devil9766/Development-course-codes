@@ -1,0 +1,85 @@
+html{
+    background-color:#51b9e6; 
+    font-family: 'Mooli', sans-serif;
+    margin-top: -15px;
+    color:darkred;
+    
+}
+div{
+    border: 5px white solid;
+}
+h1{
+    font-weight: 300pt;
+    font-size: 30pt;
+    text-align: center;
+    background-color: #FFBC42;
+    border: 5px solid white;    
+}
+#user{
+    height: 300px;
+    border: 5px white solid;
+    margin:-10px;
+}
+.info{
+    text-align: center;
+    background-color: antiquewhite;
+    padding-top: 0.02px;
+    padding-bottom: 5px;
+    margin-top: -15px;
+    
+}
+h3{
+    text-align: center;
+}
+.education{
+    background-color: #CBE896;
+    margin-top: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;;
+
+}
+.work-experience{
+    background-color: #FBD84C;
+    margin-top: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 20px;
+
+}
+.skills{
+    background-color: #E56876;
+    margin-top: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+.award{
+    background-color: #70D756;
+    margin-top: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 20px;
+}
+.personal{
+    background-color: #06AC9C;
+    margin-top: 10px;
+    padding-top: 1px;
+    padding-bottom: 20px;
+}
+
+#link{
+    border:2px white solid;
+    padding: 5px;
+    border-radius: 20px;
+    border-inline-width: 20px; 
+    text-align: center;
+    font-size: 20px;
+    font-weight:bold;
+    text-decoration: none;
+    margin: 65pt;    
+    background-color:beige;
+    color:blueviolet;
+}
+footer{
+    text-align: center;
+    font-weight: bold
+}
