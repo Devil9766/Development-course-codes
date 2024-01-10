@@ -1,0 +1,24 @@
+<%- include("partials/header.ejs") %>
+
+
+
+        <div class="search-container">
+            <h2>searched results: </h2>
+            
+            <form class="searchedLinks" action="/searchedId-name" method="post">
+                <% for( let i = 0; i < data.results.length; i++ ) { %>
+                    <button type="submit" name="id1" value="<%= data.results[i].id %>"><img src= "<%= image + data.results[i].backdrop_path %>" alt="movie images">
+                        <p><%= data.results[i].original_name  %></p>                      
+                    </button>    
+                <% } %>
+            </form>
+            <div class="page-no-edit">
+                <a href="/previousPage-Search">Prev</a> <p>page no:- <%=  data.page %></p> <a href="/nextPage-Search">Next</a>
+            </div>
+        </div>
+
+
+
+
+
+<%-include("partials/footer.ejs") %>
