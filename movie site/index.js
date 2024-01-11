@@ -102,6 +102,7 @@ app.get("/previousPage-tvShow", async (req, res)=>{
 
 app.post("/searchedMedia" , async (req , res) =>{
     mediaName = req.body["mediaName"] ;
+    
     try {
         const result  = await axios.get(`https://api.themoviedb.org/3/search/multi?query=${mediaName}&include_adult=false&language=en-US&page=1` , config)
         res.render("search.ejs" , {
@@ -146,12 +147,13 @@ app.get("/previousPage-Search" , async (req , res) =>{
 app.post("/movieId-name" , async (req , res) =>{
     let newId = req.body.id1;
     console.log(newId);
+    let mediaImage = "https://image.tmdb.org/t/p/w780"
     try {
         const result = await axios.get(`https://api.themoviedb.org/3/movie/${newId}?language=en-US` , config)
         console.log(result.data);
         res.render("movies-info.ejs" , {
             data : result.data,
-            image : imageBaseUrl
+            image : mediaImage
         } )
     } catch (error) {
         res.status(404).send(error.response.data);
@@ -161,40 +163,34 @@ app.post("/movieId-name" , async (req , res) =>{
 app.post("/tvShowId-name" , async (req , res) =>{
     let newId = req.body.id1;
     console.log(newId);
+    let mediaImage = "https://image.tmdb.org/t/p/w780"
     try {
         const result = await axios.get(`https://api.themoviedb.org/3/tv/${newId}?language=en-US` , config)
         console.log(result.data);
         res.render("movies-info.ejs" , {
             data : result.data,
-            image : imageBaseUrl
+            image : mediaImage
         } )
     } catch (error) {
         res.status(404).send(error.response.data);
     }
 });
 
-app.post("/searchedId-name" , async (req , res) =>{
+app.post("/searchedId-name/:type" , async (req , res) =>{
     let newId = req.body.id1;
-    console.log(newId);
-    var result = "";
+    let type = req.params.type;
+    let mediaImage = "https://image.tmdb.org/t/p/w780"
     let movieSearchUrl = `https://api.themoviedb.org/3/movie/${newId}?language=en-US`;
     let tvSearchUrl = `https://api.themoviedb.org/3/tv/${newId}?language=en-US`
     try {
-        if( axios.get(movieSearchUrl , config) === res.status(200)) {
-            result = await axios.get(movieSearchUrl , config) ;
-            console.log(result.data);
-            
-        }else{
-            result = await axios.get(tvSearchUrl , config) 
-            console.log(result.data);
-            
-        }
+        const result = await axios.get(type==="movie"?movieSearchUrl:tvSearchUrl, config)
+        console.log(result.data);
         res.render("movies-info.ejs" , {
             data : result.data,
-            image : imageBaseUrl
-        })
-        
-        
+            image : mediaImage,
+            
+        }) 
+
     } catch (error) {
         res.status(404).send(error.message.data);
     }
